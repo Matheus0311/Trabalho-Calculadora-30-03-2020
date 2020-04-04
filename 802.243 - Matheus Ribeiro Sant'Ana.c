@@ -6,7 +6,7 @@
 int main()//Início da função int main ().
 {
     char S, V; //Variável de caracteres alfanumérico.
-    float a, b, c, result; //Variável de números reais.
+    float a=0, b=0, c=0, result=0; //Variável de números reais.
     int i=1;//Variável de contador.
     setlocale(LC_ALL, "Portuguese"); //LC_ALL Faz referência à todos os aspectos de localização.
     do{//função do-while sendo aberta.
@@ -43,10 +43,10 @@ int main()//Início da função int main ().
 //A entrada de dados poderia ser feita apenas uma vez, acima da função switch.
 //A escolha foi feita apenas para fins de estética do programa.
                     system("color 0B");//Mudar a coloração.
-                    printf("\n                                                   Adição!");
-                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro número.
+                    printf("\n                                                   ++Adição!++");
+                    printf("\n\n\n\n\n\n\n\n                                        Informe o primeiro operando ---> ");//Entrada do primeiro número.
                         scanf("%f", &a);//Leitura do primeiro número
-                    printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo número.
+                    printf("\n                                        Informe o segundo operando --->  ");//Entrada do segundo número.
                         scanf("%f", &b);//Leitura do segundo número.
                     result = a + b;//Cálculo.
                     break;//Fim Case: 1.
@@ -54,7 +54,7 @@ int main()//Início da função int main ().
                 case '2'://Executa a subtração dos dados que serão inseridos.
                 {
                     system("color 07");//Mudar a coloração.
-                    printf("\n                                                   Subtração!");
+                    printf("\n                                                 --Subtração!--");
                     printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro número.
                         scanf("%f", &a);//Leitura do primeiro número
                     printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo número.
@@ -65,7 +65,7 @@ int main()//Início da função int main ().
                 case '3'://Executa a multiplicação dos dados que serão inseridos
                 {
                     system("color 0D");//Mudar a coloração.
-                    printf("\n                                                 Multiplicação!");
+                    printf("\n                                               **Multiplicação!**");
                     printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro número.
                         scanf("%f", &a);//Leitura do primeiro número
                     printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo número.
@@ -76,7 +76,7 @@ int main()//Início da função int main ().
                 case '4'://Executa a divisão dos dados que serão inseridos.
                 {
                     system("color 0E");//Mudar a coloração.
-                    printf("\n                                                    Divisão!");
+                    printf("\n                                                  //Divisão!//");
                     printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro número.
                         scanf("%f", &a);//Leitura do primeiro número
                     printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo número.
@@ -86,8 +86,8 @@ int main()//Início da função int main ().
                 }
                 case '5'://Executa a potenciação do primeiro dado pelo segundo inseridos.
                 {
-                    system("color 0F");//Mudar a coloração.
-                    printf("\n                                                Potenciação!");
+                    system("color 0C");//Mudar a coloração.
+                    printf("\n                                              ^^Potenciação!^^");
                     printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro número.
                         scanf("%f", &a);//Leitura do primeiro número
                     printf("\n                                       Informe o expoente --->  ");//Entrada do segundo número.
@@ -102,12 +102,13 @@ int main()//Início da função int main ().
                     break;//Fim Case: 5.
                 }
             }
-            printf("\n                                       Esse é o seu resultado ---> %g\n", result);//Saída de resultados.
+            printf("\n                                        Esse é o seu resultado ---> %g\n", result);//Saída de resultados.
             printf("\n\n                                        Deseja continuar com outra operação? \n                                       'S' para sim \n                                       'N' para não \n                                       ---> ");
                 V = getche();//Permite que o número seja lido no instante que é digitado e permaneça na tela.
             if (V=='S' || V == 's')//Condição para que o segundo if ocorra.
             {
                 system("cls");//Limpar a tela.
+                i =1, a=0, b=0, c=0, result=0;//Reniciando as variáveis.
             }
         }
         else//Caso o primeiro if não seja atendido.
