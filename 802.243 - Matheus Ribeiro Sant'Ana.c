@@ -1,123 +1,231 @@
-//Created by: Matheus Ribeiro Sant'Ana. RGM:802.243
-#include <stdio.h> //Biblioteca de tratamento de entrada/saÌda.
-#include <stdlib.h> //Biblioteca de implementaÁ„o de FunÁıes para diversas operaÁıes.
-#include <locale.h> //Biblioteca que especifica constantes de acordo com a localizaÁ„o especÌfica, como moeda, data, etc.
-#include <conio.h> //Biblioteca para utilizaÁ„o de funÁıes como: getche
-int main()//InÌcio da funÁ„o int main ().
+//Created by: Matheus Ribeiro Sant'Ana. RGM:802.243//Created by: Matheus Ribeiro Sant'Ana. RGM:802.243
+#include <stdio.h> //Biblioteca de tratamento de entrada/sa√≠da.
+#include <stdlib.h> //Biblioteca de implementa√ß√£o de Fun√ß√µes para diversas opera√ß√µes.
+#include <locale.h> //Biblioteca que especifica constantes de acordo com a localiza√ß√£o espec√≠fica, como moeda, data, etc.
+#include <conio.h> //Biblioteca para utiliza√ß√£o de fun√ß√µes como: getche
+int main()//In√≠cio da fun√ß√£o int main ().
 {
-    char S, V; //Vari·vel de caracteres alfanumÈrico.
-    float a=0, b=0, c=0, result=0; //Vari·vel de n˙meros reais.
-    int i=1;//Vari·vel de contador.
-    setlocale(LC_ALL, "Portuguese"); //LC_ALL Faz referÍncia ‡ todos os aspectos de localizaÁ„o.
-    do{//funÁ„o do-while sendo aberta.
-        system("color 0A"); //Mudar a coloraÁ„o.
-        printf("\n=======================================================>Calculadora<====================================================\n");//Menu criado para que a estÈtica do programa fique agrad·vel.
+    char S, V; //Vari√°vel de caracteres alfanum√©rico.
+    float a=0, b=0, c=0, result=0; //Vari√°vel de n√∫meros reais.
+    int i=1;//Vari√°vel de contador.
+    setlocale(LC_ALL, "Portuguese"); //LC_ALL Faz refer√™ncia √† todos os aspectos de localiza√ß√£o.
+    do{//fun√ß√£o do-while sendo aberta.
+        system("color 0A"); //Mudar a colora√ß√£o.
+        printf("\n=======================================================>Calculadora<====================================================\n");//Menu criado para que a est√©tica do programa fique agrad√°vel.
         printf("\n************************************************************************************************************************\n");
         printf("\n                                                 _________________________");
         printf("\n                                                |                         |");
-        printf("\n                                                |    Escolha a opÁ„o      |");
+        printf("\n                                                |    Escolha a op√ß√£o      |");
         printf("\n                                                |_________________________|\n\n");
         printf("                                                     0 - Sair\n");
-        printf("                                                     1 - Adic„o\n");
-        printf("                                                     2 - SubtraÁ„o\n");
-        printf("                                                     3 - MultiplicaÁ„o\n");
-        printf("                                                     4 - Divis„o\n");
-        printf("                                                     5 - PotenciaÁ„o\n");
+        printf("                                                     1 - Adic√£o\n");
+        printf("                                                     2 - Subtra√ß√£o\n");
+        printf("                                                     3 - Multiplica√ß√£o\n");
+        printf("                                                     4 - Divis√£o\n");
+        printf("                                                     5 - Potencia√ß√£o\n");
+        printf("                                                     6 - Porcentagem\n");
         printf("\n************************************************************************************************************************\n");//Fim do menu criado.
-        printf("\n\n\n\n                                                   Sua opÁ„o È ---> ");//Entrada de dados.
-            S = getche();//Permite que o n˙mero seja lido no instante que È digitado e permaneÁa na tela.
-        if (S=='0' || S=='1' || S=='2' || S=='3' || S == '4' || S == '5')//CondiÁ„o para que o primeiro if ocorra.
+        printf("\n\n\n\n                                                   Sua op√ß√£o √© ---> ");//Entrada de dados.
+            S = getche();//Permite que o n√∫mero seja lido no instante que √© digitado e permane√ßa na tela.
+        if (S=='0' || S=='1' || S=='2' || S=='3' || S == '4' || S == '5' || S == '6')//Condi√ß√£o para que o primeiro if ocorra.
         {
             system("cls");
-            switch (S)//FunÁ„o para escolher o que foi lido em S = getche ().
+            switch (S)//Fun√ß√£o para escolher o que foi lido em S = getche ().
             {
                 case '0'://Sair do programa.
                 {
-                    system("color 40");//Mudar a coloraÁ„o.
+                    system("color 40");//Mudar a colora√ß√£o.
                     return(0);//Sem retorno.
                     break;//Fim Case: 0.
                 }
-                case '1'://Executa a soma dos dados que ser„o inseridos.
+                case '1'://Executa a soma dos dados que ser√£o inseridos.
                 {
-//A entrada de dados comeÁa aqui apenas por causa da mudanÁa de cor que È feita apÛs a leitura do dado.
-//A entrada de dados poderia ser feita apenas uma vez, acima da funÁ„o switch.
-//A escolha foi feita apenas para fins de estÈtica do programa.
-                    system("color 0B");//Mudar a coloraÁ„o.
-                    printf("\n                                                   ++AdiÁ„o!++");
-                    printf("\n\n\n\n\n\n\n\n                                        Informe o primeiro operando ---> ");//Entrada do primeiro n˙mero.
-                        scanf("%f", &a);//Leitura do primeiro n˙mero
-                    printf("\n                                        Informe o segundo operando --->  ");//Entrada do segundo n˙mero.
-                        scanf("%f", &b);//Leitura do segundo n˙mero.
-                    result = a + b;//C·lculo.
+//A entrada de dados come√ßa aqui apenas por causa da mudan√ßa de cor que √© feita ap√≥s a leitura do dado.
+//A entrada de dados poderia ser feita apenas uma vez, acima da fun√ß√£o switch.
+//A escolha foi feita apenas para fins de est√©tica do programa.
+                    system("color 0B");//Mudar a colora√ß√£o.
+                    printf("\n                                                   ++Adi√ß√£o!++");
+                    printf("\n\n\n\n\n\n\n\n                                        Informe o primeiro operando ---> ");//Entrada do primeiro n√∫mero.
+                        scanf("%f", &a);//Leitura do primeiro n√∫mero
+                    printf("\n                                        Informe o segundo operando --->  ");//Entrada do segundo n√∫mero.
+                        scanf("%f", &b);//Leitura do segundo n√∫mero.
+                    result = a + b;//C√°lculo.
                     break;//Fim Case: 1.
                 }
-                case '2'://Executa a subtraÁ„o dos dados que ser„o inseridos.
+                case '2'://Executa a subtra√ß√£o dos dados que ser√£o inseridos.
                 {
-                    system("color 07");//Mudar a coloraÁ„o.
-                    printf("\n                                                 --SubtraÁ„o!--");
-                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro n˙mero.
-                        scanf("%f", &a);//Leitura do primeiro n˙mero
-                    printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo n˙mero.
-                        scanf("%f", &b);//Leitura do segundo n˙mero.
-                    result = a - b;//C·lculo.
+                    system("color 07");//Mudar a colora√ß√£o.
+                    printf("\n                                                 --Subtra√ß√£o!--");
+                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro n√∫mero.
+                        scanf("%f", &a);//Leitura do primeiro n√∫mero
+                    printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo n√∫mero.
+                        scanf("%f", &b);//Leitura do segundo n√∫mero.
+                    result = a - b;//C√°lculo.
                     break;//Fim Case: 2.
                 }
-                case '3'://Executa a multiplicaÁ„o dos dados que ser„o inseridos
+                case '3'://Executa a multiplica√ß√£o dos dados que ser√£o inseridos
                 {
-                    system("color 0D");//Mudar a coloraÁ„o.
-                    printf("\n                                               **MultiplicaÁ„o!**");
-                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro n˙mero.
-                        scanf("%f", &a);//Leitura do primeiro n˙mero
-                    printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo n˙mero.
-                        scanf("%f", &b);//Leitura do segundo n˙mero.
-                    result = a*b;//C·lculo.
+                    system("color 0D");//Mudar a colora√ß√£o.
+                    printf("\n                                               **Multiplica√ß√£o!**");
+                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro n√∫mero.
+                        scanf("%f", &a);//Leitura do primeiro n√∫mero
+                    printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo n√∫mero.
+                        scanf("%f", &b);//Leitura do segundo n√∫mero.
+                    result = a*b;//C√°lculo.
                     break;//Fim Case: 3.
                 }
-                case '4'://Executa a divis„o dos dados que ser„o inseridos.
+                case '4'://Executa a divis√£o dos dados que ser√£o inseridos.
                 {
-                    system("color 0E");//Mudar a coloraÁ„o.
-                    printf("\n                                                  //Divis„o!//");
-                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro n˙mero.
-                        scanf("%f", &a);//Leitura do primeiro n˙mero
-                    printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo n˙mero.
-                        scanf("%f", &b);//Leitura do segundo n˙mero.
-                    result = a/b;//C·lculo.
+                    system("color 0E");//Mudar a colora√ß√£o.
+                    printf("\n                                                  //Divis√£o!//");
+                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro n√∫mero.
+                        scanf("%f", &a);//Leitura do primeiro n√∫mero
+                    printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo n√∫mero.
+                        scanf("%f", &b);//Leitura do segundo n√∫mero.
+                    result = a/b;//C√°lculo.
                     break;//Fim Case: 4.
                 }
-                case '5'://Executa a potenciaÁ„o do primeiro dado pelo segundo inseridos.
+                case '5'://Executa a potencia√ß√£o do primeiro dado pelo segundo inseridos.
                 {
-                    system("color 0C");//Mudar a coloraÁ„o.
-                    printf("\n                                              ^^PotenciaÁ„o!^^");
-                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro n˙mero.
-                        scanf("%f", &a);//Leitura do primeiro n˙mero
-                    printf("\n                                       Informe o expoente --->  ");//Entrada do segundo n˙mero.
-                        scanf("%f", &b);//Leitura do segundo n˙mero.
+                    system("color 0C");//Mudar a colora√ß√£o.
+                    printf("\n                                              ^^Potencia√ß√£o!^^");
+                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro n√∫mero.
+                        scanf("%f", &a);//Leitura do primeiro n√∫mero
+                    printf("\n                                       Informe o expoente --->  ");//Entrada do segundo n√∫mero.
+                        scanf("%f", &b);//Leitura do segundo n√∫mero.
                     c = a;
-                    while (i<b)//FunÁ„o while para ajudar no c·lculo de potenciaÁ„o.
+                    while (i<b)//Fun√ß√£o while para ajudar no c√°lculo de potencia√ß√£o.
                     {
-                        a=a * c;//C·lculo.
-                        i++;//Vari·vel Contador.
+                        a=a * c;//C√°lculo.
+                        i++;//Vari√°vel Contador.
                     }
-                    result = a;//Fim do c·lculo de potenciaÁ„o.
+                    result = a;//Fim do c√°lculo de potencia√ß√£o.
                     break;//Fim Case: 5.
                 }
+                case '6':
+                    {
+                        system("color 09");
+                        printf("                                            %%Porcentagem%%");
+                        printf("\n\n\n\n\n\n\n\n                                        Informe a porcentagem ---> ");
+                        scanf("%f", &a);
+                        printf("\n                                        De ---> ");
+                        scanf("%f", &b);
+                        result = (a*b)/100;
+                        break;
+
+
+                    }
             }
-            printf("\n                                        Esse È o seu resultado ---> %g\n", result);//SaÌda de resultados.
-            printf("\n\n                                        Deseja continuar com outra operaÁ„o? \n                                       'S' para sim \n                                       'N' para n„o \n                                       ---> ");
-                V = getche();//Permite que o n˙mero seja lido no instante que È digitado e permaneÁa na tela.
-            if (V=='S' || V == 's')//CondiÁ„o para que o segundo if ocorra.
+            printf("\n                                        Esse √© o seu resultado ---> %g\n", result);//Sa√≠da de resultados.
+            printf("\n\n                                        Deseja continuar com outra opera√ß√£o? \n                                       'S' para sim \n                                       'N' para n√£o \n                                       ---> ");
+                V = getche();//Permite que o n√∫mero seja lido no instante que √© digitado e permane√ßa na tela.
+            if (V=='S' || V == 's')//Condi√ß√£o para que o segundo if ocorra.
             {
                 system("cls");//Limpar a tela.
-                i =1, a=0, b=0, c=0, result=0;//Reniciando as vari·veis.
+                i =1, a=0, b=0, c=0, result=0;//Reniciando as vari√°veis.
             }
         }
-        else//Caso o primeiro if n„o seja atendido.
+        else//Caso o primeiro if n√£o seja atendido.
         {
-            system("color 0C");//Mudar a coloraÁ„o.
-            printf("\n\n                                                  Erro: Operador Inv·lido!\n\n");//Mensagem de erro.
+            system("color 0C");//Mudar a colora√ß√£o.
+            printf("\n\n                                                  Erro: Operador Inv√°lido!\n\n");//Mensagem de erro.
             system("pause");//Pausa do sistema.
             V='S';//Para retornar a tela
             system("cls");//Limpar a tela.
         }
-    }while (V=='S' || V=='s');//CondiÁ„o para que a funÁ„o 'do-while' exista, seu encerramento.
-}//Fim da funÁ„o int.
+    }while (V=='S' || V=='s');//Condi√ß√£o para que a fun√ß√£o 'do-while' exista, seu encerramento.
+}//Fim da fun√ß√£o int.
+        {
+            system("cls");
+            switch (S)//Fun√ß√£o para escolher o que foi lido em S = getche ().
+            {
+                case '0'://Sair do programa.
+                {
+                    system("color 40");//Mudar a colora√ß√£o.
+                    return(0);//Sem retorno.
+                    break;//Fim Case: 0.
+                }
+                case '1'://Executa a soma dos dados que ser√£o inseridos.
+                {
+//A entrada de dados come√ßa aqui apenas por causa da mudan√ßa de cor que √© feita ap√≥s a leitura do dado.
+//A entrada de dados poderia ser feita apenas uma vez, acima da fun√ß√£o switch.
+//A escolha foi feita apenas para fins de est√©tica do programa.
+                    system("color 0B");//Mudar a colora√ß√£o.
+                    printf("\n                                                   ++Adi√ß√£o!++");
+                    printf("\n\n\n\n\n\n\n\n                                        Informe o primeiro operando ---> ");//Entrada do primeiro n√∫mero.
+                        scanf("%f", &a);//Leitura do primeiro n√∫mero
+                    printf("\n                                        Informe o segundo operando --->  ");//Entrada do segundo n√∫mero.
+                        scanf("%f", &b);//Leitura do segundo n√∫mero.
+                    result = a + b;//C√°lculo.
+                    break;//Fim Case: 1.
+                }
+                case '2'://Executa a subtra√ß√£o dos dados que ser√£o inseridos.
+                {
+                    system("color 07");//Mudar a colora√ß√£o.
+                    printf("\n                                                 --Subtra√ß√£o!--");
+                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro n√∫mero.
+                        scanf("%f", &a);//Leitura do primeiro n√∫mero
+                    printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo n√∫mero.
+                        scanf("%f", &b);//Leitura do segundo n√∫mero.
+                    result = a - b;//C√°lculo.
+                    break;//Fim Case: 2.
+                }
+                case '3'://Executa a multiplica√ß√£o dos dados que ser√£o inseridos
+                {
+                    system("color 0D");//Mudar a colora√ß√£o.
+                    printf("\n                                               **Multiplica√ß√£o!**");
+                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro n√∫mero.
+                        scanf("%f", &a);//Leitura do primeiro n√∫mero
+                    printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo n√∫mero.
+                        scanf("%f", &b);//Leitura do segundo n√∫mero.
+                    result = a*b;//C√°lculo.
+                    break;//Fim Case: 3.
+                }
+                case '4'://Executa a divis√£o dos dados que ser√£o inseridos.
+                {
+                    system("color 0E");//Mudar a colora√ß√£o.
+                    printf("\n                                                  //Divis√£o!//");
+                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro n√∫mero.
+                        scanf("%f", &a);//Leitura do primeiro n√∫mero
+                    printf("\n                                       Informe o segundo operando --->  ");//Entrada do segundo n√∫mero.
+                        scanf("%f", &b);//Leitura do segundo n√∫mero.
+                    result = a/b;//C√°lculo.
+                    break;//Fim Case: 4.
+                }
+                case '5'://Executa a potencia√ß√£o do primeiro dado pelo segundo inseridos.
+                {
+                    system("color 0C");//Mudar a colora√ß√£o.
+                    printf("\n                                              ^^Potencia√ß√£o!^^");
+                    printf("\n\n\n\n\n\n\n\n                                       Informe o primeiro operando ---> ");//Entrada do primeiro n√∫mero.
+                        scanf("%f", &a);//Leitura do primeiro n√∫mero
+                    printf("\n                                       Informe o expoente --->  ");//Entrada do segundo n√∫mero.
+                        scanf("%f", &b);//Leitura do segundo n√∫mero.
+                    c = a;
+                    while (i<b)//Fun√ß√£o while para ajudar no c√°lculo de potencia√ß√£o.
+                    {
+                        a=a * c;//C√°lculo.
+                        i++;//Vari√°vel Contador.
+                    }
+                    result = a;//Fim do c√°lculo de potencia√ß√£o.
+                    break;//Fim Case: 5.
+                }
+            }
+            printf("\n                                        Esse √© o seu resultado ---> %g\n", result);//Sa√≠da de resultados.
+            printf("\n\n                                        Deseja continuar com outra opera√ß√£o? \n                                       'S' para sim \n                                       'N' para n√£o \n                                       ---> ");
+                V = getche();//Permite que o n√∫mero seja lido no instante que √© digitado e permane√ßa na tela.
+            if (V=='S' || V == 's')//Condi√ß√£o para que o segundo if ocorra.
+            {
+                system("cls");//Limpar a tela.
+                i =1, a=0, b=0, c=0, result=0;//Reniciando as vari√°veis.
+            }
+        }
+        else//Caso o primeiro if n√£o seja atendido.
+        {
+            system("color 0C");//Mudar a colora√ß√£o.
+            printf("\n\n                                                  Erro: Operador Inv√°lido!\n\n");//Mensagem de erro.
+            system("pause");//Pausa do sistema.
+            V='S';//Para retornar a tela
+            system("cls");//Limpar a tela.
+        }
+    }while (V=='S' || V=='s');//Condi√ß√£o para que a fun√ß√£o 'do-while' exista, seu encerramento.
+}//Fim da fun√ß√£o int.
